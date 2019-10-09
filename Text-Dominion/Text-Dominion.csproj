@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Text_Dominion</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Domain\Dominion\" />
+    <Folder Include="Domain\Dominion\Models\" />
+    <Folder Include="Domain\Player\" />
+    <Folder Include="Domain\Table\" />
+    <Folder Include="Domain\Table\Models\" />
+    <Folder Include="Domain\Table\Extensions\" />
+    <Folder Include="Domain\Player\Models\" />
+    <Folder Include="Domain\Player\Extensions\" />
+    <Folder Include="Domain\Dominion\Extensions\" />
+    <Folder Include="Domain\Dominion\Tools\" />
+  </ItemGroup>
+</Project>
