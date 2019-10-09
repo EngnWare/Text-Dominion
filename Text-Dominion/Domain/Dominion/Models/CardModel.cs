@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Text_Dominion.Domain.Player.Models;
+using Text_Dominion.Domain.Table.Models;
 
 namespace Text_Dominion.Domain.Dominion.Models
 {
@@ -21,6 +20,15 @@ namespace Text_Dominion.Domain.Dominion.Models
 
         public List<CardTypes> Types { get; set; }
 
-        public Func<PlayerModel, Task> CardAction { get; set; }
+        public virtual void PlayCard(ref PlayerModel currentPlayer,
+            ref List<PlayerModel> otherPlayers)
+        {
+
+        }
+
+        public virtual void TrashCard(ref TrashSlotModel trashSlot)
+        {
+
+        }
     }
 }
