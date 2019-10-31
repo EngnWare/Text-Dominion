@@ -7,17 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\" />
-    <Folder Include="Domain\Dominion\" />
-    <Folder Include="Domain\Dominion\Models\" />
-    <Folder Include="Domain\Player\" />
-    <Folder Include="Domain\Table\" />
-    <Folder Include="Domain\Table\Models\" />
-    <Folder Include="Domain\Table\Extensions\" />
-    <Folder Include="Domain\Player\Models\" />
-    <Folder Include="Domain\Player\Extensions\" />
-    <Folder Include="Domain\Dominion\Extensions\" />
-    <Folder Include="Domain\Dominion\Tools\" />
-    <Folder Include="Domain\Dominion\AllCards\" />
+    <Folder Include="Ninject\" />
+    <Folder Include="Dominion\" />
+    <Folder Include="Models\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Factory\" />
+    <Folder Include="Factory\Interface\" />
+    <Folder Include="Tools\" />
+    <Folder Include="Dominion\Interface\" />
+    <Folder Include="Dominion\Enums\" />
+    <Folder Include="Player\" />
+    <Folder Include="Player\Interface\" />
+    <Folder Include="Service\" />
+    <Folder Include="Service\Interface\" />
+    <Folder Include="Dominion\Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
   </ItemGroup>
 </Project>
