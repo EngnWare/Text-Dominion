@@ -13,9 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\BaseSet\Action\" />
-    <Folder Include="Database\BaseSet\Land\" />
-    <Folder Include="Database\BaseSet\Treasure\" />
+    <Folder Include="Database\Intrigue\" />
+    <Folder Include="Database\SeaSide\" />
     <Folder Include="Ninject\" />
     <Folder Include="Interface\" />
     <Folder Include="Factory\" />
