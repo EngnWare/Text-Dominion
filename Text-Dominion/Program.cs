@@ -10,10 +10,12 @@ namespace Text_Dominion
     {
         static void Main(string[] args)
         {
-            var kernel = new StandardKernel();
-            kernel.Load(new ApplicationNinjectBase());
+            //var kernel = new StandardKernel();
+            //kernel.Load(new ApplicationNinjectBase());
 
-            var table = kernel.Get<ITable>();
+            //var table = kernel.Get<ITable>();
+
+            new Demo.Demo1().Demo();
         }
     }
 }

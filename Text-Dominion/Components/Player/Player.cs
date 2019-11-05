@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Text_Dominion.Dominion.Interface;
+using Text_Dominion.Components.Card.Abstraction;
 using Text_Dominion.Factory.Interface;
 using Text_Dominion.Interface;
 using Text_Dominion.Player.Interface;
@@ -21,7 +21,7 @@ namespace Text_Dominion.Player
         public List<ICard> Deck { get; set; }
         public List<ICard> DiscardPile { get; set; }
         public List<ICard> Hand { get; set; }
-        public byte Money { get; set; }
+        public byte Treasure { get; set; }
         public byte Actions { get; set; }
         public byte Buys { get; set; }
 
