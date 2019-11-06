@@ -24,10 +24,11 @@ namespace Text_Dominion.Player
         public byte Treasure { get; set; }
         public byte Actions { get; set; }
         public byte Buys { get; set; }
+        public byte Debt { get; set; }
 
         public void BuyCard(ref ICard card)
         {
-            
+            card.Buy(this);
         }
 
         public void DiscardCard(ref ICard card)

@@ -12,6 +12,7 @@ namespace Text_Dominion.Player.Interface
         byte Treasure { get; set; }
         byte Actions { get; set; }
         byte Buys { get; set; }
+        byte Debt { get; set; }
 
         void TrashCard(ref ICard card);
         void DiscardCard(ref ICard card);
