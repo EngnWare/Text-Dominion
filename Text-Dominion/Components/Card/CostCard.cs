@@ -15,10 +15,10 @@ namespace Text_Dominion.Components.Card
             Card = card;
         }
 
-        public void Buy(ref Player.Player activePlayer)
+        public void Buy(IPlayer activePlayer)
         {
-            activePlayer.Treasure -= Cost;
-            Card?.Buy(ref activePlayer); //Hm. The fact that this reads the reverse of "player buys card" makes me think 
+            //activePlayer.Treasure -= Cost;
+            Card?.Buy(activePlayer); //Hm. The fact that this reads the reverse of "player buys card" makes me think 
                                     // I may have implemented in reverse. Dependency Inversion Principle.
             //if a debt card, this would have activePlayer.Debt += Debt;
         }

@@ -3,10 +3,10 @@ using Text_Dominion.Player.Interface;
 
 namespace Text_Dominion.Database.BaseSet
 {
-    public class Copper : ICard
+    class Silver : ICard
     {
-        public const byte Cost = 0;
-        public const byte PlayValue = 1;
+        public const byte Cost = 3;
+        public const byte PlayValue = 2;
         public const string Type = "Treasure";
 
         public void Buy(IPlayer activePlayer)

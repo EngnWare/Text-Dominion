@@ -1,4 +1,6 @@
-﻿using Text_Dominion.Database.BaseSet;
+﻿using Text_Dominion.Components.Card;
+using Text_Dominion.Components.Card.Abstraction;
+using Text_Dominion.Database.BaseSet;
 using Text_Dominion.Player;
 
 namespace Text_Dominion.Demo

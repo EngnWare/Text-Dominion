@@ -14,10 +14,10 @@ namespace Text_Dominion.Components.Card
             _debt = debt;
             _card = card;
         }
-        public void Buy(ref Player.Player activePlayer)
+        public void Buy(IPlayer activePlayer)
         {
-            activePlayer.Debt += _debt;
-            _card?.Buy(ref activePlayer);
+            //activePlayer.Debt += _debt;
+            //_card?.Buy(ref activePlayer);
         }
     }
 }

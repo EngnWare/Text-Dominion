@@ -10,7 +10,14 @@ namespace Text_Dominion.Components.Card.Abstraction
      * Currently return void, but maybe in the future return some sort of printable object which uses a print
      * service to handle console display.
      */
-    public interface ICard
+    public interface ICard //: IBuyCard, IPlayCard
     {
+        void Buy(IPlayer player);
+        void Play(IPlayer player);
+        //void Gain();
+        //void Reveal();
+        //void IsType();
+        //void Trash();
+        //void Discard();
     }
 }

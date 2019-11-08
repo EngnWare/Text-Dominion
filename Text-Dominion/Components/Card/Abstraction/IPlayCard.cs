@@ -2,8 +2,8 @@
 
 namespace Text_Dominion.Components.Card.Abstraction
 {
-    internal interface IPlayCard : ICard
+    public interface IPlayCard
     {
-        void Play(IPlayer player);
+        void Play(Player.Player player);
     }
 }

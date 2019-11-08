@@ -9,6 +9,7 @@ namespace Text_Dominion.Player
         //private readonly ITable _table;
         //private readonly IDominionFactory _factory;
 
+
         //public Player(ITable table, IDominionFactory factory)
         //{
         //    _table = table ?? throw new ArgumentNullException(nameof(table));
@@ -17,10 +18,35 @@ namespace Text_Dominion.Player
         public List<ICard> Deck { get; set; }
         public List<ICard> DiscardPile { get; set; }
         public List<ICard> Hand { get; set; }
-        public byte Treasure = 1;
-        public byte Actions = 1;
-        public byte Buys = 1;
-        public byte Debt = 1;
+        //public byte Treasure { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public byte Treasure
+        {
+            get { return _treasure; }
+            set { _treasure = value; }
+        }
+        private byte _treasure;
+
+        public byte Debt
+        {
+            get { return _debt; }
+            set { _debt = value; }
+        }
+        private byte _debt;
+
+        public byte Buys
+        {
+            get { return _buys; }
+            set { _buys = value; }
+        }
+        private byte _buys;
+
+        public byte Actions
+        {
+            get { return _actions; }
+            set { _actions = value; }
+        }
+        private byte _actions;
 
         public void BuyCard(ICard card)
         {
@@ -29,7 +55,7 @@ namespace Text_Dominion.Player
 
         public void PlayCard(ICard card)
         {
-            //TODO: do a thing
+            card.Play(this);
         }
     }
 }

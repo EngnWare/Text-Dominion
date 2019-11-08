@@ -2,8 +2,8 @@
 
 namespace Text_Dominion.Components.Card.Abstraction
 {
-    public interface IBuyCard : ICard
+    public interface IBuyCard
     {
-        void Buy(ref Player.Player activePlayer);
+        void Buy(IPlayer activePlayer);
     }
 }
