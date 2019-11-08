@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Text_Dominion.Dominion.Interface;
+﻿using System.Collections.Generic;
+using Text_Dominion.Components.Card.Abstraction;
 
 namespace Text_Dominion.Interface
 {

@@ -12,13 +12,5 @@ namespace Text_Dominion.Components.Card.Abstraction
      */
     public interface ICard
     {
-        void Buy(IPlayer activePlayer);
-        void Gain();
-        void Reveal();
-        void IsType();
-        void Play(IPlayer player);
-        void Trash();
-        void Discard();
-
     }
 }

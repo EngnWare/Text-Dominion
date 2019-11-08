@@ -1,9 +1,11 @@
-﻿namespace Text_Dominion.Database.BaseSet
+﻿using Text_Dominion.Components.Card.Abstraction;
+
+namespace Text_Dominion.Database.BaseSet
 {
-    public class Copper
+    public class Copper : ICard
     {
         public byte Cost => 0;
         public byte Value => 1;
-        public CardType Type => "Treasure";
+        public string Type => "Treasure";
     }
 }

@@ -6,6 +6,7 @@ namespace Text_Dominion.Components.Card
     public class DebtCard : IBuyCard
     {
         private readonly byte _debt;
+#nullable enable
         private readonly IBuyCard? _card;
 
         public DebtCard(byte debt, IBuyCard? card = null)
@@ -13,10 +14,10 @@ namespace Text_Dominion.Components.Card
             _debt = debt;
             _card = card;
         }
-        public void Buy(IPlayer activePlayer)
+        public void Buy(ref Player.Player activePlayer)
         {
             activePlayer.Debt += _debt;
-            _card?.Buy(activePlayer);
+            _card?.Buy(ref activePlayer);
         }
     }
 }

@@ -3,22 +3,22 @@ using Text_Dominion.Player.Interface;
 
 namespace Text_Dominion.Components.Card
 {
-    public class CostCard : ICard
+    public class CostCard : IBuyCard
     {
         private readonly byte Cost;
 
-        public ICard Card { get; }
-
-        public CostCard(byte cost, ICard? card = null)
+        public IBuyCard Card { get; }
+#nullable enable
+        public CostCard(byte cost, IBuyCard? card = null)
         {
             Cost = cost;
             Card = card;
         }
 
-        public void Buy(IPlayer activePlayer)
+        public void Buy(ref Player.Player activePlayer)
         {
             activePlayer.Treasure -= Cost;
-            Card?.Buy(activePlayer); //Hm. The fact that this reads the reverse of "player buys card" makes me think 
+            Card?.Buy(ref activePlayer); //Hm. The fact that this reads the reverse of "player buys card" makes me think 
                                     // I may have implemented in reverse. Dependency Inversion Principle.
             //if a debt card, this would have activePlayer.Debt += Debt;
         }
