@@ -6,10 +6,10 @@ namespace Text_Dominion.Players
 {
     public class Player : IPlayer
     {
-        public List<AbstractCard> Deck { get; set; }
-        public List<AbstractCard> Hand { get; set; }
-        public List<AbstractCard> CardsInPlay { get; set; }
-        public List<AbstractCard> DiscardPile { get; set; }
+        public List<ICard> Deck { get; set; }
+        public List<ICard> Hand { get; set; }
+        public List<ICard> CardsInPlay { get; set; }
+        public List<ICard> DiscardPile { get; set; }
 
         public byte Treasure { get; set; }
         public byte Actions { get; set; }
@@ -21,12 +21,12 @@ namespace Text_Dominion.Players
 
         }
 
-        public void Buy(AbstractCard card)
+        public void Buy(ICard card)
         {
             card.Buy(this);
         }
 
-        public void Gain(AbstractCard card)
+        public void Gain(ICard card)
         {
             card.Gain(this);
         }
@@ -35,20 +35,20 @@ namespace Text_Dominion.Players
         {
             card.Play(this);
         }
-        public void Discard(AbstractCard card)
+        public void Discard(ICard card)
         {
             card.Discard(this);
         }
-        public void Reveal(AbstractCard card)
+        public void Reveal(ICard card)
         {
             card.Reveal(this);
         }
-        public string GetType(AbstractCard card)
+        public string GetType(ICard card)
         {
             return card.GetCardType();
         }
 
-        public void Trash(AbstractCard card)
+        public void Trash(ICard card)
         {
 
         }

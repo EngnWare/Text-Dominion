@@ -5,9 +5,9 @@ namespace Text_Dominion.Database.BaseSet
 {
     public class Treasures
     {
-        public AbstractCard GetCopper()
+        public CostCard GetCopper()
         {
-            return new AbstractCard()
+            return new CostCard()
             {
                 Name = "Copper",
                 Cost = 0,

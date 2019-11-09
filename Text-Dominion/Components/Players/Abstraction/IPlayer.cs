@@ -6,13 +6,13 @@ namespace Text_Dominion.Players.Interface
     public interface IPlayer
     {
         void Draw(byte numberOfCardsToDraw);
-        void Buy(AbstractCard card);
-        void Gain(AbstractCard card);
+        void Buy(ICard card);
+        void Gain(ICard card);
         void Play(ICard card);
-        void Discard(AbstractCard card);
-        void Reveal(AbstractCard card);
-        string GetType(AbstractCard card);
+        void Discard(ICard card);
+        void Reveal(ICard card);
+        string GetType(ICard card);
 
-        void Trash(AbstractCard card);
+        void Trash(ICard card);
     }
 }
