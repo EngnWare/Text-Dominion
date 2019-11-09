@@ -1,9 +1,9 @@
 ﻿using Text_Dominion.Components.Card.Abstraction;
-using Text_Dominion.Player.Interface;
+using Text_Dominion.Players.Interface;
 
 namespace Text_Dominion.Database.BaseSet
 {
-    public class Copper : ICard
+    public class Copper : AbstractCard
     {
         //Note: this is almost entirely boiler-plate code repeated in Silver and Gold
         //See AbstractCard for a way to reduce this.
@@ -13,15 +13,5 @@ namespace Text_Dominion.Database.BaseSet
         public const byte Cost = 0;
         public const byte PlayValue = 1;
         public const string Type = "Treasure";
-
-        public void Buy(IPlayer activePlayer)
-        {
-            activePlayer.Treasure -= Cost;
-        }
-
-        public void Play(IPlayer player)
-        {
-            player.Treasure += PlayValue;
-        }
     }
 }

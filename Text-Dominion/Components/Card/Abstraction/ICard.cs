@@ -1,23 +1,16 @@
-﻿using Text_Dominion.Player.Interface;
+﻿using Text_Dominion.Players;
 
 namespace Text_Dominion.Components.Card.Abstraction
 {
-    /*
-     * In order account for different (or even new) types of cards (action, duration, night, etc.) and 
-     * their attributes (cost, debt, in supply, etc.), we intend to use an abstraction layer to employ
-     * the Decorator pattern.
-     * 
-     * Currently return void, but maybe in the future return some sort of printable object which uses a print
-     * service to handle console display.
-     */
-    public interface ICard //: IBuyCard, IPlayCard
+    public interface ICard
     {
-        void Buy(IPlayer player);
-        void Play(IPlayer player);
-        //void Gain();
-        //void Reveal();
-        //void IsType();
-        //void Trash();
-        //void Discard();
+        void Buy(Player player);
+        void Gain(Player player);
+        void Play(Player player);
+        void Discard(Player player);
+        void Reveal(Player player);
+        string GetCardType();
+        void Trash(Player player);
+        bool IsPlayable(Player player);
     }
 }

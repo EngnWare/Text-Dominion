@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Text_Dominion.Components.Card.Abstraction;
-using Text_Dominion.Player.Interface;
+using Text_Dominion.Players.Interface;
 
 namespace Text_Dominion.Components.Table
 {

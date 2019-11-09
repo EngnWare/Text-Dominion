@@ -1,50 +1,171 @@
-﻿using Text_Dominion.Player.Interface;
+﻿using Text_Dominion.Players;
 
 namespace Text_Dominion.Components.Card.Abstraction
 {
-    public abstract class AbstractCard
+    public class BaseCard : ICard
     {
-        public byte Cost;
-        public byte PlayValue;
+        //every card has...
+        public string Name;
         public string Type;
 
-        public void Buy(IPlayer activePlayer)
+        public void Buy(Player player)
         {
-            activePlayer.Treasure -= Cost;
+            throw new System.NotImplementedException();
         }
 
-        public void Play(IPlayer player)
+        public void Discard(Player player)
         {
-            player.Treasure += PlayValue;
+            throw new System.NotImplementedException();
+        }
+
+        public void Gain(Player player)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string GetCardType()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool IsPlayable(Player player)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Play(Player player)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Reveal(Player player)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Trash(Player player)
+        {
+            throw new System.NotImplementedException();
         }
     }
 
-    public class ConcreteCard : AbstractCard
+    public class CostCard : BaseCard //
     {
-        public ConcreteCard(byte cost, byte playValue, string type)
+        public CostCard()
         {
-            Cost = cost;
-            PlayValue = playValue;
-            Type = type; //Make a readonly list;
+            //todo
         }
     }
 
-    public class DebtCard : AbstractCard
+    public class AbstractCard : ICard
     {
-        private byte Debt;
+        //most have...
+        public byte Cost;
+        
+        //public AbstractCard(string name, byte cost, string type)
+        //{
+        //    Name = name;
+        //    Cost = cost;
+        //    Type = type;
+        //}
 
-        //demonstration of idea
-        public DebtCard(byte cost, byte playValue, string type, byte debt)
+        //public void SetType(string type) //because VictoryCard implements AbstractCard 
+        //{
+        //    Type = type;
+        //}
+
+        public void Buy(Player player)
         {
-            Cost = cost;
-            PlayValue = playValue;
-            Type = type; //Make a readonly list;
-            Debt = debt;
+            player.Buys -= 1;
+            player.Treasure -= Cost;
+            player.DiscardPile.Add(this); //Or is this in gain?
+        }
+        public void Gain(Player player)
+        {
+            player.Treasure -= Cost;
         }
 
-        public new void Buy(IPlayer player)
+        public void Play(Player player)
         {
-            player.Debt += Debt;
+            player.CardsInPlay.Add(this);
+        }
+        public void Discard(Player player)
+        {
+
+        }
+        public void Reveal(Player player)
+        {
+
+        }
+        public string GetCardType()
+        {
+            return Type;
+        }
+
+        public void Trash(Player player)
+        {
+
+        }
+
+        public bool IsPlayable(Player player)
+        {
+            return true;
         }
     }
+
+    public class Card : AbstractCard
+    {
+        //all basic implementations from the abstract class
+        public Card(string name, byte cost, string type)
+        {
+            Name = name;
+            Cost = cost;
+            Type = type;
+        }
+
+    }
+
+    //public class CostCard : AbstractCard
+    //{
+    //    public byte Cost;
+    //}
+
+    //public class PlusTreasureCard : AbstractCard
+    //{
+    //    public byte PlayValue;
+        
+    //    public void Play(Player player)
+    //    {
+    //        player.Treasure += PlayValue;
+    //    }
+    //}
+
+    //public class ConcreteCard : AbstractCard
+    //{
+    //    public ConcreteCard(byte cost, string type)
+    //    {
+    //        Cost = cost;
+    //        Type = type; //Make a readonly list;
+    //    }
+    //}
+
+    //public class DebtCard : AbstractCard
+    //{
+    //    private byte Debt;
+
+    //    //demonstration of idea
+    //    public DebtCard(byte cost, byte playValue, string type, byte debt)
+    //    {
+    //        Cost = cost;
+    //        PlayValue = playValue;
+    //        Type = type; //Make a readonly list;
+    //        Debt = debt;
+    //    }
+
+    //    public new void Buy(Player player)
+    //    {
+    //        player.Treasure -= Cost;
+    //        player.Debt += Debt;
+    //    }
+    //}
 }
