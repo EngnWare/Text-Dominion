@@ -4,6 +4,12 @@ namespace Text_Dominion.Components.Card.Abstraction
 {
     public interface ICard
     {
+        /*
+         * Perhaps separate into 
+         * 1. PlayerInteractions (buy, play, etc.), 
+         * 2. cardProperties (IsVictory, IsPlayable, etc.)
+         * 3. 
+         */
         void Buy(Player player);
         void Gain(Player player);
         void Play(Player player);

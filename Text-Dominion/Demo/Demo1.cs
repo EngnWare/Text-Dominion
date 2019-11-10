@@ -19,6 +19,9 @@ namespace Text_Dominion.Demo
             //Demo of Costcard : BaseCard : ICard 
             var cc = new CostCard();
             player1.Play(cc); //demonstrates that CostCard is still an ICard via inheritance.
+
+            //Demo the decorator
+            var plainCard = new BaseCard(); 
         }
     }
 }

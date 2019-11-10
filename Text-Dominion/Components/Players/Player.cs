@@ -8,8 +8,8 @@ namespace Text_Dominion.Players
     {
         public List<ICard> Deck { get; set; }
         public List<ICard> Hand { get; set; }
-        public List<ICard> CardsInPlay { get; set; }
-        public List<ICard> DiscardPile { get; set; }
+        public List<ICard> PlayPile { get; set; }
+        public List<AbstractCard> DiscardPile { get; set; }
 
         public byte Treasure { get; set; }
         public byte Actions { get; set; }
