@@ -16,9 +16,9 @@ namespace Text_Dominion.Demo
             player1.Play(copper);
             System.Console.WriteLine(player1.Treasure);
 
-            //Demo of Costcard : BaseCard : ICard 
+            //Demo of Costcard : BaseCard : AbstractCard 
             var cc = new CostCard();
-            player1.Play(cc); //demonstrates that CostCard is still an ICard via inheritance.
+            player1.Play(cc); //demonstrates that CostCard is still an AbstractCard via inheritance.
 
             //Demo the decorator
             var plainCard = new BaseCard(); 

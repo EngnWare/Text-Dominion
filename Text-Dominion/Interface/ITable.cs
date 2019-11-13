@@ -7,7 +7,7 @@ namespace Text_Dominion.Interface
     {
         List<object> obj { get; set; }
 
-        void Setup(List<ICard> cards);
+        void Setup(List<AbstractCard> cards);
         void NextTurn();
     }
 }

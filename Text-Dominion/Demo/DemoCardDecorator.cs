@@ -1,6 +1,7 @@
 ﻿using System;
+using Text_Dominion.Components.Card.Abstraction;
 
-namespace CrypDominion
+namespace CrypDominion.Demo
 {
     public static class DemoCarDecorator
     {
@@ -12,15 +13,15 @@ namespace CrypDominion
              * 3. Use ExpandoObject (slow and memory intensive though)
              * 4. Find another way
              */
-            var silver = new PlusMoneyCard(2, new CostCard(1, new PlainCard()))
+            var silver = new PlusMoneyCard(2, new CostCard(1, new BaseCard()))
             {
                 Name = "Silver",
-                Cost = 1,
+                //Cost = 1,
                 PlusMoney = 2
             };
             Console.WriteLine("Let's buy then play a fully implemented silver.");
-            Console.WriteLine(silver.Buy());
-            Console.WriteLine(silver.Play());
+            //Console.WriteLine(silver.Buy());
+            //Console.WriteLine(silver.Play());
         }
     }
 }

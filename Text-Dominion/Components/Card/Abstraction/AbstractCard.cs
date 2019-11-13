@@ -1,4 +1,5 @@
-﻿using Text_Dominion.Players;
+﻿using System;
+using Text_Dominion.Players;
 
 namespace Text_Dominion.Components.Card.Abstraction
 {
@@ -69,11 +70,11 @@ namespace Text_Dominion.Components.Card.Abstraction
         //}
     }
 
-    public class CardDecorator : AbstractCard
+    public class CardDecorator : BaseCard
     {
-        protected AbstractCard DecoratedCard;
+        protected BaseCard DecoratedCard;
 
-        public CardDecorator(AbstractCard decoratedCard)
+        public CardDecorator(BaseCard decoratedCard)
         {
             DecoratedCard = decoratedCard;
         }
@@ -122,9 +123,31 @@ namespace Text_Dominion.Components.Card.Abstraction
     {
         public byte Cost;
 
-        public CostCard(AbstractCard card)
+        public CostCard(byte cost, BaseCard card) : base(card)
         {
-            DecoratedCard = card;
+            Cost = cost;
         }
+
+        //public override void Buy()
+        //{
+        //    DecoratedCard.Buy() + Cost;
+        //}
+    }
+
+
+    public class PlusMoneyCard : CardDecorator
+    {
+        public byte PlusMoney;
+
+        public PlusMoneyCard(byte plusMoney, BaseCard card) : base(card)
+        {
+            PlusMoney = plusMoney;
+        }
+
+        //public override bool Play()
+        //{
+        //    Console.WriteLine($"Add {PlusMoney} treasures to player.");
+        //    return DecoratedCard.Play();
+        //}
     }
 }
