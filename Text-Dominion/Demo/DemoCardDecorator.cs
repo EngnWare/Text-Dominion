@@ -7,12 +7,6 @@ namespace CrypDominion.Demo
     {
         public static void Run()
         {
-            /* options for adding a property dynamically:
-             * 1. Continue adding properties to the constructor as show below
-             * 2. Let the base class have a single dictionary property. "Name":"Copper", Cost:1, etc.
-             * 3. Use ExpandoObject (slow and memory intensive though)
-             * 4. Find another way
-             */
             var silver = new PlusMoneyCard(2, new CostCard(1, new BaseCard()))
             {
                 Name = "Silver",
