@@ -1,9 +1,8 @@
 ﻿using Text_Dominion.Components.Card;
-using Text_Dominion.Components.Card.Abstraction;
 
 namespace Text_Dominion.Database.BaseSet
 {
-    public static class Treasures
+    public static class TreasuresCards
     {
         public static CardDecorator Copper => new PlusMoneyCard(1, new CostCard(0, new BaseCard()))
         {

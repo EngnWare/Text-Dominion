@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Text_Dominion.Components.Card.Abstraction;
+using Text_Dominion.Components.Card;
 using Text_Dominion.Database.BaseSet;
 using Text_Dominion.Players;
 
@@ -34,15 +34,23 @@ namespace Text_Dominion.Demo
             var cards = new List<CardDecorator> {copper, silver, gold};
             PlayCards(cards);
 
-            var i = Treasures.Copper;
-            var i2 = Treasures.Copper;
-            var i3 = Treasures.Copper;
-            var i4 = Treasures.Silver;
-            var i5 = Treasures.Gold;
+            var i = TreasuresCards.Copper;
+            var i2 = TreasuresCards.Copper;
+            var i3 = TreasuresCards.Copper;
+            var i4 = TreasuresCards.Silver;
+            var i5 = TreasuresCards.Gold;
 
             i.Name = "Modified the first copper name only";
             cards = new List<CardDecorator> {i, i2, i3, i4, i5};
             PlayCards(cards);
+        }
+
+        public static void MarketDemo()
+        {
+            //Let's play the Market card
+            var market = KingdomCards.Market;
+            Console.WriteLine(market.Name);
+            Console.WriteLine(market.Type);
         }
 
         private static void PlayCards(IEnumerable<CardDecorator> cards)

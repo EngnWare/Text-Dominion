@@ -17,7 +17,8 @@ namespace Text_Dominion
             //var table = kernel.Get<ITable>();
 
             //new Demo.Demo1().Demo();
-            DemoCarDecorator.Run();
+            //DemoCarDecorator.Run();
+            DemoCarDecorator.MarketDemo();
         }
     }
 }
