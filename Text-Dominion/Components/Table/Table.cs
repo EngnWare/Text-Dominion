@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Text_Dominion.Components.Card.Abstraction;
-using Text_Dominion.Players.Interface;
+using Text_Dominion.Components.Players.Abstraction;
 
 namespace Text_Dominion.Components.Table
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Text_Dominion.Components.Card.Abstraction;
-using Text_Dominion.Players.Interface;
+using Text_Dominion.Components.Players.Abstraction;
 
 namespace Text_Dominion.Players
 {
@@ -26,31 +26,31 @@ namespace Text_Dominion.Players
             card.Buy(this);
         }
 
-        public void Gain(AbstractCard card)
-        {
-            card.Gain(this);
-        }
+        //public void Gain(AbstractCard card)
+        //{
+        //    card.Gain(this);
+        //}
 
-        public void Play(AbstractCard card)
-        {
-            card.Play(this);
-        }
-        public void Discard(AbstractCard card)
-        {
-            card.Discard(this);
-        }
-        public void Reveal(AbstractCard card)
-        {
-            card.Reveal(this);
-        }
-        public string GetType(AbstractCard card)
-        {
-            return card.GetCardType();
-        }
+        //public void Play(AbstractCard card)
+        //{
+        //    card.Play(this);
+        //}
+        //public void Discard(AbstractCard card)
+        //{
+        //    card.Discard(this);
+        //}
+        //public void Reveal(AbstractCard card)
+        //{
+        //    card.Reveal(this);
+        //}
+        //public string GetType(AbstractCard card)
+        //{
+        //    return card.GetCardType();
+        //}
 
-        public void Trash(AbstractCard card)
-        {
+        //public void Trash(AbstractCard card)
+        //{
 
-        }
+        //}
     }
 }

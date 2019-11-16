@@ -22,13 +22,18 @@ namespace Text_Dominion.Components.Card.Abstraction
     {
         //every card has...
         //public string Name;
-        //public string Type;
-        //...but not sure anything else is gauranteed
+        //public list<type> Types;
+        //...but not sure anything else is guaranteed but...
+        /*
+         * I am strongly considering setting buys, actions, cost, plusMoney, etc.
+         * as properties in the base class.
+         * ...Man, Decorator syntax is such a mess.
+         */
         
         public override void Buy(Player player)
         {
             //Add one to GainCount
-            player.DiscardPile.Add(this);
+            //player.DiscardPile.Add(this);
 
         }
         //public override void Gain(Player player)
