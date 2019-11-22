@@ -10,21 +10,21 @@ namespace Text_Dominion.Database.BaseSet
             Name = "Copper",
             Type = "Treasure",
             //Cost = 0,
-            //PlusMoney = 2
+            //PlusTreasure = 2
         };
         public static CardDecorator Silver => new PlusMoneyCard(2, new CostCard(3, new BaseCard()))
         {
             Name = "Silver",
             Type = "Treasure",
             //Cost = 3,
-            //PlusMoney = 2
+            //PlusTreasure = 2
         };
         public static CardDecorator Gold => new PlusMoneyCard(3, new CostCard(6, new BaseCard()))
         {
             Name = "Gold",
             Type = "Treasure",
             //Cost = 6,
-            //PlusMoney = 2
+            //PlusTreasure = 2
         };
 
 

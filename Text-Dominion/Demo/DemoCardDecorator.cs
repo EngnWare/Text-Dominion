@@ -15,21 +15,21 @@ namespace Text_Dominion.Demo
                 Name = "Copper",
                 Type = "Treasure",
                 //Cost = 0,
-                //PlusMoney = 2
+                //PlusTreasure = 2
             };
             var silver = new PlusMoneyCard(2, new CostCard(3, new BaseCard()))
             {
                 Name = "Silver",
                 Type = "Treasure",
                 //Cost = 3,
-                //PlusMoney = 2
+                //PlusTreasure = 2
             };
             var gold = new PlusMoneyCard(3, new CostCard(6, new BaseCard()))
             {
                 Name = "Gold",
                 Type = "Treasure",
                 //Cost = 6,
-                //PlusMoney = 2
+                //PlusTreasure = 2
             };
             var cards = new List<CardDecorator> {copper, silver, gold};
             PlayCards(cards);
@@ -52,7 +52,7 @@ namespace Text_Dominion.Demo
             {
                 Console.WriteLine(card.Name);
                 Console.WriteLine(card.Type);
-                /* Console.WriteLine(card.PlusMoney);
+                /* Console.WriteLine(card.PlusTreasure);
                  * Can't view decorated properties at compile time? Hm.
                  * Well, it's not really needed. Just makes me pause with concern.
                  */
