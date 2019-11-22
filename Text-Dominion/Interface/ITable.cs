@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Text_Dominion.Dominion.Interface;
+﻿using System.Collections.Generic;
+using Text_Dominion.Components.Card.Abstraction;
 
 namespace Text_Dominion.Interface
 {
@@ -8,7 +7,7 @@ namespace Text_Dominion.Interface
     {
         List<object> obj { get; set; }
 
-        void Setup(List<ICard> cards);
+        void Setup(List<AbstractCard> cards);
         void NextTurn();
     }
 }

@@ -7,20 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\Intrigue\" />
+    <Folder Include="Database\SeaSide\" />
     <Folder Include="Ninject\" />
-    <Folder Include="Dominion\" />
-    <Folder Include="Models\" />
     <Folder Include="Interface\" />
     <Folder Include="Factory\" />
     <Folder Include="Factory\Interface\" />
     <Folder Include="Tools\" />
-    <Folder Include="Dominion\Interface\" />
-    <Folder Include="Dominion\Enums\" />
-    <Folder Include="Player\" />
-    <Folder Include="Player\Interface\" />
     <Folder Include="Service\" />
     <Folder Include="Service\Interface\" />
-    <Folder Include="Dominion\Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Ninject" Version="3.3.4" />
